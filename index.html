@@ -1,6 +1,22 @@
+/* Add your styles here */
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+#quiz {
+  margin: 20px;
+}
+
+.question {
+  margin-bottom: 10px;
+}
 <!DOCTYPE html>
 <html>
-<head>
+<head> <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
   <title>Sanrio Characters Quiz</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -10,5 +26,27 @@
   <button id="submit">Submit</button>
 
   <script src="quiz.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sanrio Characters Background</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <!-- Content of your web page goes here -->
+  <h1>Welcome to the Sanrio Characters Background</h1>
+  <p>This is some content on your page.</p>
+
+  <div class="characters">
+    <img src="png-transparent-hello-kitty-illustration-hello-kitty-computer-icons-hello-miscellaneous-heart-logo" alt="Hello Kitty" class="character hello-kitty">
+    <img src="png-clipart-melody-art-my-melody-hello-kitty-character-my-melody-miscellaneous-flower" alt="My Melody" class="character my-melody">
+    <img src="png-transparent-kerokeropi-illustration-hello-kitty-sanrio-kero-kero-keroppi-no-daibouken-drawing-keropi-tree-frog-disc-jockey-snoopy-thumbnail" alt="Keroppi" class="character keroppi">
+    <img src="png-chococat" alt="Chococat" class="character chococat">
+  </div>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
