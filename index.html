@@ -1,52 +1,67 @@
-/* Add your styles here */
-body {
-  font-family: Arial, sans-serif;
-}
+<!-- index.html -->
+<!-- Content of your web page goes here -->
 
-h1 {
-  text-align: center;
-}
+<style>
+  h1 {
+    text-align: center;
+  }
 
-#quiz {
-  margin: 20px;
-}
+  #quiz {
+    margin: 20px;
+  }
 
-.question {
-  margin-bottom: 10px;
-}
+  .question {
+    margin-bottom: 10px;
+  }
+</style>
+
 <!DOCTYPE html>
 <html>
-<head> <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
+<head>
+  <meta http-equiv="Content-Security-Policy" content="default-src *;">
   <title>Sanrio Characters Quiz</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
+<body style="background-color:#F8A7D3">
   <h1>Welcome to the Sanrio Characters Quiz!</h1>
   <div id="quiz"></div>
   <button id="submit">Submit</button>
 
   <script src="quiz.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register("service-worker.js")
+        .then((registration) => {
+          console.log("Service Worker registered with scope:", registration.scope);
+        })
+        .catch((error) => {
+          console.error("Service Worker registration failed:", error);
+        });
+    }
+  </script>
 </body>
 </html>
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Sanrio Characters Background</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <!-- Content of your web page goes here -->
-  <h1>Welcome to the Sanrio Characters Background</h1>
-  <p>This is some content on your page.</p>
+
 
   <div class="characters">
-    <img src="png-transparent-hello-kitty-illustration-hello-kitty-computer-icons-hello-miscellaneous-heart-logo" alt="Hello Kitty" class="character hello-kitty">
-    <img src="png-clipart-melody-art-my-melody-hello-kitty-character-my-melody-miscellaneous-flower" alt="My Melody" class="character my-melody">
-    <img src="png-transparent-kerokeropi-illustration-hello-kitty-sanrio-kero-kero-keroppi-no-daibouken-drawing-keropi-tree-frog-disc-jockey-snoopy-thumbnail" alt="Keroppi" class="character keroppi">
-    <img src="png-chococat" alt="Chococat" class="character chococat">
+    <img src="images/hello-kitty-character-birthday-party-birthday.jpg" alt="Hello Kitty" class="character hello-kitty">
+    <img src="images/3241669-middle.png" alt="Chococat" class="character chococat">
+    <img src="images/png-transparent-kerokeropi-illustration-hello-kitty-sanrio-kero-kero-keroppi-no-daibouken-drawing-keropi-tree-frog-disc-jockey-snoopy.png" alt="Keroppi" class="character keroppi">
+    <img src="images/my-melody-s-cartoon-character-illustration-png-clipart-thumbnail.jpg" alt="My Melody" class="character my-melody">
   </div>
 
   <script src="scripts.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register("/path-to-service-worker/service-worker.js")
+        .then((registration) => {
+          console.log("Service Worker registered with scope:", registration.scope);
+        })
+        .catch((error) => {
+          console.error("Service Worker registration failed:", error);
+        });
+    }
+  </script>
 </body>
 </html>
