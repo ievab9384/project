@@ -1,16 +1,21 @@
 const quizData = [
-    {
-      question: "Which character is a white cat with a red bow?",
-      options: ["Hello Kitty", "My Melody", "Keroppi", "Chococat"],
-      answer: "Hello Kitty"
-    },
-    {
-      question: "Who is a little penguin with a blue and white cap?",
-      options: ["Pochacco", "Tuxedo Sam", "Badtz-Maru", "Patty & Jimmy"],
-      answer: "Tuxedo Sam"
-    },
-    // Add more questions and answers here
-  ];
+  {
+    question: "Which character is a white cat with a red bow?",
+    options: ["Hello Kitty", "My Melody", "Keroppi", "Chococat"],
+    answer: "Hello Kitty"
+  },
+  {
+    question: "Who is a little penguin with a blue and white cap?",
+    options: ["Pochacco", "Tuxedo Sam", "Badtz-Maru", "Patty & Jimmy"],
+    answer: "Tuxedo Sam"
+  },
+  {
+    question: "Who was the founder of Sanrio?",
+    options: ["Shintaro Tsuji", "Haruki Murakami", "Hayao Miyazaki","Akira Kurosawa"],
+    answer: "Shintaro Tsuji"
+  }
+  // Add more quiz data objects as needed
+];
 
   const quizContainer = document.getElementById('quiz');
   const submitButton = document.getElementById('submit');
