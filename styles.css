@@ -8,7 +8,7 @@ body {
 
 .character-container {
   position: fixed;
-  top: 90vh; /* Adjust the viewport height to move the pictures further down */
+  top: 4em; /* Adjust the viewport height to move the pictures further down */
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
