@@ -1,11 +1,3 @@
-/* Add your styles here */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: white; /* Set your desired background color */
-}
-
 .characters {
   position: fixed;
   top: 90vh;
@@ -14,15 +6,16 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-color: inherit; /* Inherit the background color from the body */
+  background-color: inherit;
 }
 
 .character {
   position: absolute;
-  width: 150px; /* Adjust size as needed */
-  height: auto; /* Automatically adjust height based on aspect ratio */
-  opacity: 0.5; /* Adjust opacity as needed */
-  background-color: transparent !important; /* Make the background transparent */
+  width: 150px;
+  height: auto;
+  opacity: 0.5;
+  background-color: transparent !important;
+  pointer-events: none;
 }
 
 .hello-kitty {
@@ -37,20 +30,11 @@ body {
 
 .keroppi {
   top: 150px;
-  left: 100px;
+  left: 400px; /* Adjust the left value to move Keroppi further to the right */
 }
 
 .chococat {
   top: 250px;
-  left: 250px;
+  left: 600px; /* Adjust the left value to move Chococat further to the right */
 }
-
-#explanations {
-  display: none;
-}
-
-#goBack {
-  display: none;
-}
-
 
