@@ -6,15 +6,14 @@ body {
   background-color: #fccdcd; /* Set your desired background color */
 }
 
-.character-container {
+.characters {
   position: fixed;
-  top: 4em; /* Adjust the viewport height to move the pictures further down */
+  top: 90vh;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   z-index: -1;
-  pointer-events: none;
   background-color: inherit; /* Inherit the background color from the body */
 }
 
@@ -44,6 +43,14 @@ body {
 .chococat {
   top: 250px;
   left: 250px;
+}
+
+#explanations {
+  display: none;
+}
+
+#goBack {
+  display: none;
 }
 
 
