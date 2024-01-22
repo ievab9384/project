@@ -1,61 +1,95 @@
-<!-- index.html -->
-<!-- Content of your web page goes here -->
-
-<style>
-  h1 {
-    text-align: center;
-  }
-
-  #quiz {
-    margin: 20px;
-  }
-
-  .question {
-    margin-bottom: 10px;
-  }
-</style>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanrio Character Quiz</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Assuming your CSS is in a file named styles.css -->
-  <meta http-equiv="Content-Security-Policy" content="default-src *;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sanrio Characters Quiz</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: #e5759c;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #quiz-container {
+      margin: 20px;
+    }
+
+    .characters {
+      position: fixed;
+      top: 90vh;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: inherit;
+    }
+
+    .character {
+      position: absolute;
+      width: 150px;
+      height: auto;
+      opacity: 0.5;
+      background-color: transparent !important;
+      pointer-events: none;
+    }
+
+    .hello-kitty {
+      top: 4em;
+      left: 20px;
+    }
+
+    .my-melody {
+      top: 50px;
+      left: 200px;
+    }
+
+    .keroppi {
+      top: 150px;
+      left: 350px;
+    }
+
+    .chococat {
+      top: 250px;
+      left: 250px;
+    }
+  </style>
 </head>
-<body style="background-color:#F8A7D3">
-  <h1>Welcome to the Sanrio Characters Quiz!</h1>
-  <div id="quiz"></div>
+<body>
+
+  <h1>૮꒰ ˶• ༝ •˶꒱ა ♡ Test your knowledge about Sanrio characters!</h1>
+
+  <!-- Your existing quiz container and submit button -->
+  <div id="quiz-container"></div>
   <button id="submit">Submit</button>
 
-  <script src="quiz.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register("service-worker.js")
-        .then((registration) => {
-          console.log("Service Worker registered with scope:", registration.scope);
-        })
-        .catch((error) => {
-          console.error("Service Worker registration failed:", error);
-        });
-    }
-  </script>
-</body>
-</html>
-
-
-
+  <!-- Quiz Container -->
   <div class="characters">
-    <img src="images/hello-kitty-character-birthday-party-birthday.jpg" alt="Hello Kitty" class="character hello-kitty">
-    <img src="images/3241669-middle.png" alt="Chococat" class="character chococat">
+    <!-- Your character images here -->
+    <img src="images/hello-kitty-character-birthday-party-birthday.png" alt="Hello Kitty" class="character hello-kitty">
+    <img src="images/3241669-middle (1).png" alt="Chococat" class="character chococat">
     <img src="images/png-transparent-kerokeropi-illustration-hello-kitty-sanrio-kero-kero-keroppi-no-daibouken-drawing-keropi-tree-frog-disc-jockey-snoopy.png" alt="Keroppi" class="character keroppi">
-    <img src="images/my-melody-s-cartoon-character-illustration-png-clipart-thumbnail.jpg" alt="My Melody" class="character my-melody">
+    <img src="images/my-melody-s-cartoon-character-illustration-png-clipart-thumbnail.png" alt="My Melody" class="character my-melody">
   </div>
 
+  <!-- Add this div where you want the explanations to appear -->
+  <div id="explanations" style="display: none;"></div>
+
+  <!-- Add the "Go Back" button after explanations -->
+  <button id="goBack" style="display: none;">Go Back</button>
+
+  <!-- Include your scripts -->
   <script src="scripts.js"></script>
+  <script src="quiz.js"></script>
+
+  <!-- Add your service worker registration -->
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register("/path-to-service-worker/service-worker.js")
@@ -66,6 +100,10 @@
           console.error("Service Worker registration failed:", error);
         });
     }
+
+    // Call the buildQuiz function to populate the quiz questions and options
+    buildQuiz();
   </script>
-</body> <p>Visit our website: <a href="#"target="_blank">www.sanriocharacterquiz.com</a></p>
+
+</body>
 </html>
