@@ -56,11 +56,14 @@ const quizData = [
   // Add more quiz data objects as needed
 ];
 
-const quizContainer = document.getElementById('quiz');
+const quizContainer = document.getElementById('quiz-container'); // Correct the ID
 const submitButton = document.getElementById('submit');
-const goBackButton = document.getElementById('goBack'); // Add this line
+const goBackButton = document.getElementById('goBack');
 
 function buildQuiz() {
+  // Clear the existing content in the quiz container
+  quizContainer.innerHTML = '';
+
   quizData.forEach((data, index) => {
     const questionDiv = document.createElement('div');
     questionDiv.classList.add('question');
@@ -80,6 +83,7 @@ function buildQuiz() {
     quizContainer.appendChild(questionDiv);
   });
 }
+
 
 function showResults() {
   const answerContainers = quizContainer.querySelectorAll('.question');
@@ -122,40 +126,6 @@ function showResults() {
 
   alert(`You scored ${score} out of ${quizData.length}`);
 }
-
-function goBack() {
-  // Hide the explanations container
-  document.getElementById('explanations').style.display = 'none';
-
-  // Show the quiz container
-  quizContainer.style.display = 'block';
-
-  // Show the submit button
-  submitButton.style.display = 'block';
-
-  // Hide the "Go Back" button
-  goBackButton.style.display = 'none';
-}
-
-// Call the buildQuiz function to populate the quiz questions and options
-buildQuiz();
-submitButton.addEventListener('click', showResults);
-goBackButton.addEventListener('click', goBack);
-
-  // Show the explanations container
-  explanationsContainer.style.display = 'block';
-
-  // Show the "Go Back" button
-  goBackButton.style.display = 'block';
-
-  // Hide the quiz container
-  quizContainer.style.display = 'none';
-
-   // Hide the submit button
-   submitButton.style.display = 'none';
-
-  alert(`You scored ${score} out of ${quizData.length}`);
-
 
 function goBack() {
   // Hide the explanations container
