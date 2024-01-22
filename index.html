@@ -4,63 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sanrio Characters Quiz</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: white;
-      color: #e5759c;
-    }
-
-    h1 {
-      text-align: center;
-    }
-
-    #quiz-container {
-      margin: 20px;
-    }
-
-    .characters {
-      position: fixed;
-      top: 90vh;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background-color: inherit;
-    }
-
-    .character {
-      position: absolute;
-      width: 150px;
-      height: auto;
-      opacity: 0.5;
-      background-color: transparent !important;
-      pointer-events: none;
-    }
-
-    .hello-kitty {
-      top: 4em;
-      left: 20px;
-    }
-
-    .my-melody {
-      top: 50px;
-      left: 200px;
-    }
-
-    .keroppi {
-      top: 150px;
-      left: 350px;
-    }
-
-    .chococat {
-      top: 250px;
-      left: 250px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -70,7 +14,7 @@
   <div id="quiz-container"></div>
   <button id="submit">Submit</button>
 
-  <!-- Quiz Container -->
+  <!-- Character Container -->
   <div class="characters">
     <!-- Your character images here -->
     <img src="images/hello-kitty-character-birthday-party-birthday.png" alt="Hello Kitty" class="character hello-kitty">
@@ -79,11 +23,11 @@
     <img src="images/my-melody-s-cartoon-character-illustration-png-clipart-thumbnail.png" alt="My Melody" class="character my-melody">
   </div>
 
-  <!-- Add this div where you want the explanations to appear -->
-  <div id="explanations" style="display: none;"></div>
+  <!-- Explanations Container -->
+  <div id="explanations"></div>
 
-  <!-- Add the "Go Back" button after explanations -->
-  <button id="goBack" style="display: none;">Go Back</button>
+  <!-- Go Back Button -->
+  <button id="goBack">Go Back</button>
 
   <!-- Include your scripts -->
   <script src="scripts.js"></script>
