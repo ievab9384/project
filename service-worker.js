@@ -2,7 +2,12 @@
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
-        // Add caching or other setup tasks here if needed
-        console.log('Service Worker Installed successfully.')
+      // Add any setup tasks here if needed
+      console.log('Service Worker Installed successfully.')
     );
-});
+  });
+  
+  self.addEventListener('fetch', (event) => {
+    // Handle fetch events here if needed
+  });
+  
