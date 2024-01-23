@@ -1,4 +1,4 @@
-const quizData = [
+export const quizData = [
   {
     question: "Which character is a white cat with a red bow?",
     options: ["Hello Kitty", "My Melody", "Keroppi", "Chococat"],
