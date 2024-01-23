@@ -1,3 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: #e5759c;
+}
+
+h1 {
+  text-align: center;
+}
+
+#quiz-container {
+  margin: 20px;
+}
+
 .characters {
   position: fixed;
   top: 90vh;
@@ -28,13 +44,11 @@
   left: 200px;
 }
 
-.keroppi {
-  top: 150px;
-  left: 400px; /* Adjust the left value to move Keroppi further to the right */
-}
-
 .chococat {
   top: 250px;
-  left: 600px; /* Adjust the left value to move Chococat further to the right */
+  left: 200px; /* Adjust the value to move Chococat more to the left */
 }
 
+#goBack {
+  display: none;
+}
